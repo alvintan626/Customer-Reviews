@@ -41,5 +41,5 @@ app.put('/api/restaurant/:id',(req,res)=>{
     })
   })
 
-app.listen(3004)
-console.log(`listening on port ${3004}`)
+app.listen(3306)
+console.log(`listening on port ${3000}`)

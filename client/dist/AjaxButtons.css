@@ -11,7 +11,7 @@
 }
 .buttonpress {
   height: 16px;
-  width: 16px
+  width: 16px;
 }
 
 .buttonresponse {
@@ -27,5 +27,9 @@
 }
 
 .buttonuseful > button , .buttonfunny > button , .buttoncool > button {
+  transition: 3s;
+}
+
+.buttontext {
   transition: 3s;
 }

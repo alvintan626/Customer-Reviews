@@ -15,11 +15,13 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    // var endpoint = Math.floor(Math.random() * 10) + 1; 
-    var endpoint = 1
+    var endpoint = Math.floor(Math.random() * 10) + 1; 
+    // var endpoint = 1
     $.get(`/api/restaurant/${endpoint}`, (data)=>{
       this.setState({
-        reviews:data
+        reviews:data,
+        restaurant: data[0].restaurant,
+        reviewLength: data.length
       })
     })
   }
@@ -28,12 +30,12 @@ class App extends React.Component {
 
     return(
       <div>
-        <h2 className="header"><font color="#d32323">Recommended Reviews</font> for Straw</h2>
+        <h2 className="header"><font color="#d32323">Recommended Reviews</font> for {this.state.restaurant}</h2>
         <div>
-          <Form/>
+          <Form reviewLength={this.state.reviewLength}/>
         </div>
         <div>
-          <FillerReview reviews={this.state.reviews}/>
+          <FillerReview reviews={this.state.reviews} restaurant={this.state.restaurant}/>
         </div>
         <div>
           <Description reviews={this.state.reviews}/>

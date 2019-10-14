@@ -4,11 +4,11 @@ var reviews = [];
 for (var i = 1; i<10; i++){
   for (var j = 1; j<faker.random.number(20);j++){
     var uniqueId = i;
-    var companyName = faker.Company.companyName();
-    var randomName = faker.Name.firstName() + ' ' + faker.Name.lastName()[0] + '.';
-    var randomImage = faker.Image.avatar();
-    var randomCity = faker.Address.city();
-    var randomState = faker.Address.usState();
+    var companyName = faker.company.companyName();
+    var randomName = faker.name.firstName() + ' ' + faker.name.lastName()[0] + '.';
+    var randomImage = faker.image.avatar();
+    var randomCity = faker.address.city();
+    var randomState = faker.address.state();
     var randomFriendsCount = faker.random.number(100);
     var randomReviewsCount = faker.random.number(100);
     var randomPhotosCount = faker.random.number(100);
@@ -18,7 +18,7 @@ for (var i = 1; i<10; i++){
     var randomCoolCount = faker.random.number(20);
   
     var randomStarsCount = faker.random.number(5);
-    var randomText = faker.Lorem.paragraphs()
+    var randomText = faker.lorem.paragraphs()
     function randomDate(start, end) {
       var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),
           month = '' + (d.getMonth() + 1),
@@ -34,16 +34,16 @@ for (var i = 1; i<10; i++){
     const data = 
     {
       id: i,
-      restaurant: faker.Company.companyName(),
-      name: faker.Name.firstName() + ' ' + faker.Name.lastName()[0] + '.',
-      image: faker.Image.avatar(),
-      location: faker.Address.city() +', ' + faker.Address.usState(),
+      restaurant: faker.company.companyName(),
+      name: faker.name.firstName() + ' ' + faker.name.lastName()[0] + '.',
+      image: faker.image.avatar(),
+      location: faker.address.city() +', ' + faker.address.state(),
       friendCount: faker.random.number(100),
       reviewsCount: faker.random.number(100),
       photoCount: faker.random.number(100),
       starsCount: faker.random.number(5),
       date: randomDate(new Date(2012, 0, 1), new Date()),
-      text: faker.Lorem.paragraphs(),
+      text: faker.lorem.paragraphs(),
       usefulCount: faker.random.number(20),
       usefulToggle: false,
       usefulColor: 'white',

@@ -4,13 +4,13 @@
 
 
 /*FORM*/
-.formbody {
-  width: 65%;
+.form {
+  width: 51%;
   float: left;
-  padding: 15px;
-
+  padding-left: 15px;
+  border-bottom: thin solid #e6e6e6;
 }
-.formbody::after {
+.form::after {
   content: "";
   clear: both;
   display: table;
@@ -18,28 +18,34 @@
 .searchbar {
   width: 50%;
   float: left;
+  padding: 5px;
+
   /* border: 1px solid red; */
 }
 .selectYelp {
   width: 25%;
   float: left;
-  padding: 15px;
+  padding: 5px;
+  margin-top: 5px;
   /* border: 1px solid red; */
 }
 .selectLanguage {
   width: 25%;
   float: left;
-  padding: 15px;
+  padding: 5px;
+  margin-top: 5px;
+
   /* border: 1px solid red; */
 }
   /* Style the search field */
 form.form input[type=text] {
   padding: 10px;
-  font-size: 15px;
-  border: 1px solid white;
+  font-size: 13px;
+  border: 1px solid rgb(7, 1, 1);
   float: left;
   width: 70%;
-  background: #f1f1f1;
+  background: #ffffff;
+  height: 30px;
 }
   /* Style the submit button */
 form.form button {
@@ -51,6 +57,7 @@ form.form button {
   border: 1px solid grey;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
+  height: 30px;
 }
 
 form.form button:hover {
@@ -68,4 +75,3 @@ form.form select {
   font-size: 15px;
   font-weight: bold;
 }
-
